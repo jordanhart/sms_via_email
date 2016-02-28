@@ -6,7 +6,7 @@ class SendEmail:
         self.username = address
         self.password = password
 
-    def send_mail(self, email, message):
+    def send_message(self, email, message):
 
         fromaddr = self.username
         toaddrs  = email
