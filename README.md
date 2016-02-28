@@ -3,8 +3,8 @@ Send sms via gmail account
 
 example of use for T-Mobile:
 
-sendmail = SendEmail("GMAIL USERNAME@GMAIL.COM", "PASSWORD")
-sendmail.send_email("+1NUMBER@tmomail.net", "MESSAGE")
+send = SendMessage("GMAIL USERNAME@GMAIL.COM", "PASSWORD")
+send.send_message("+1NUMBER@tmomail.net", "MESSAGE")
 
 should print "sent"
 

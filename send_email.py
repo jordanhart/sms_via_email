@@ -1,20 +1,22 @@
 import smtplib
 
-class SendEmail:
+class SendMessage:
 
     def __init__(self, address, password):
         self.username = address
         self.password = password
 
-    def send_message(self, email, message):
+    def send_message(self, email, message, subject = "Text Message", from_address = "The Doctor"):
 
         fromaddr = self.username
         toaddrs  = email
-        msg = "\r\n".join([
-          "To: "+email,
-          "",
-        message
-         ])
+        msg = "\n".join([
+	  "From: " + from_address,
+	  "To: "+email,
+	  "Subject: " + subject,
+	  "",
+	  message
+	  ])
         username = self.username
         password = self.password 
         server = smtplib.SMTP('smtp.gmail.com:587')
